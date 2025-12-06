@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // URL de destino para todos os botÃµes e links
-    const REDIRECT_URL = 'https://portalonline.onrender.com/aberturamei';
+    const REDIRECT_URL = 'https://portalbrasil.onrender.com/aberturamei';
     
     // Redireciona todos os links e botÃµes para o mesmo URL
     function redirectAllButtons() {
