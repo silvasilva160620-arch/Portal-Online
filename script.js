@@ -115,6 +115,114 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return phone;
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+    // LÓGICA PARA O MENU HAMBURGUER (MOBILE)
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    if (hamburger && navMenu) {
+        // Abre/Fecha o menu ao clicar no hamburguer
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Fecha o menu ao clicar em um dos links
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+
+    // LÓGICA PARA O HEADER QUE SOME/APARECE COM O SCROLL
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scroll para baixo
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            // Scroll para cima
+            header.style.transform = 'translateY(0)';
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    // LÓGICA PARA O FAQ (ACCORDION)
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            // Opcional: fechar outros itens ao abrir um novo
+            // faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    });
+
+    // LAZY LOADING PARA IMAGENS
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    if ('IntersectionObserver' in window) {
+        let lazyImageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    let lazyImage = entry.target;
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.removeAttribute('data-src');
+                    lazyImageObserver.unobserve(lazyImage);
+                }
+            });
+        });
+
+        lazyImages.forEach((lazyImage) => {
+            lazyImageObserver.observe(lazyImage);
+        });
+    } else {
+        // Fallback para navegadores sem IntersectionObserver
+        lazyImages.forEach(img => {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        });
+    }
+
+    // VALIDAÇÃO SIMPLES DE FORMULÁRIO (EXEMPLO)
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+        form.addEventListener('submit', (e) => {
+            let isValid = true;
+            const emailField = form.querySelector('input[type="email"]');
+            const phoneField = form.querySelector('input[type="tel"]');
+
+            if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+                alert('Por favor, insira um e-mail válido.');
+                isValid = false;
+            }
+            
+            if (phoneField && phoneField.value.replace(/\D/g, '').length < 10) {
+                alert('Por favor, insira um telefone válido com DDD.');
+                isValid = false;
+            }
+
+            if (!isValid) {
+                e.preventDefault(); // Impede o envio do formulário se for inválido
+            }
+            // Se for válido, o formulário será enviado normalmente.
+            // Aqui você pode adicionar a lógica para enviar os dados para um servidor, se necessário.
+        });
+    });
+
+});
+
     
     // MÃ¡scara para telefone
     document.querySelectorAll('input[type="tel"]').forEach(input => {
