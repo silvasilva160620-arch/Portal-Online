@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consultoria especializada em MEI. Abra seu CNPJ de forma segura e rápida. Mais de 15.000 clientes satisfeitos. Resposta garantida em 24h.">
-    <meta name="keywords" content="MEI, CNPJ, microempreendedor individual, consultoria MEI, abrir MEI">
+    <meta name="description" content="Consultoria especializada em MEI. Oferecemos orientação profissional para formalização de negócios. Empresa privada com mais de 15.000 clientes. Resposta em até 24h.">
+    <meta name="keywords" content="MEI, CNPJ, microempreendedor individual, consultoria MEI, formalização de negócios">
     <meta name="author" content="MEI Consultoria Ltda.">
     <meta name="copyright" content="2024 MEI Consultoria">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Portuguese">
     <meta name="revisit-after" content="7 days">
-    <meta property="og:title" content="MEI Consultoria - Formalize seu Negócio">
-    <meta property="og:description" content="Consultoria especializada em MEI. Abra seu CNPJ com segurança e rapidez.">
+    <meta property="og:title" content="MEI Consultoria - Consultoria Especializada em Formalização de Negócios">
+    <meta property="og:description" content="Consultoria profissional para formalização de MEI. Empresa privada com experiência comprovada.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.meiconsultoria.com.br">
     <meta property="og:image" content="https://www.meiconsultoria.com.br/og-image.jpg">
@@ -23,7 +23,7 @@
         "@type": "LocalBusiness",
         "name": "MEI Consultoria",
         "image": "https://www.meiconsultoria.com.br/logo.png",
-        "description": "Consultoria especializada em MEI. Abra seu CNPJ de forma segura e rapida.",
+        "description": "Consultoria especializada em formalização de MEI. Empresa privada que oferece orientação profissional.",
         "url": "https://www.meiconsultoria.com.br",
         "telephone": "+5511999999999",
         "email": "contato@meiconsultoria.com.br",
@@ -64,7 +64,7 @@
         "taxID": "12.345.678/0001-90",
         "url": "https://www.meiconsultoria.com.br",
         "logo": "https://www.meiconsultoria.com.br/logo.png",
-        "description": "Consultoria especializada em MEI e formalizacao de negocios",
+        "description": "Consultoria especializada em formalização de negócios e orientação sobre MEI",
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Customer Service",
@@ -94,7 +94,7 @@
         gtag('config', 'AW-XXXXXXXXXX');
     </script>
 
-    <title>MEI Consultoria - Abra seu CNPJ MEI com Segurança | Consultoria Especializada</title>
+    <title>MEI Consultoria - Consultoria Especializada em Formalização de Negócios</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* ===== RESET E VARIÁVEIS ===== */
@@ -312,71 +312,20 @@
 
         @keyframes slideArrow {
             0%, 100% {
-                transform: translateX(0px);
-                opacity: 1;
+                transform: translateX(0);
             }
             50% {
                 transform: translateX(4px);
-                opacity: 1;
             }
         }
 
         @keyframes slideArrowHover {
             0% {
-                transform: translateX(0px);
+                transform: translateX(0);
             }
             100% {
-                transform: translateX(6px);
+                transform: translateX(8px);
             }
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--text-dark);
-            border: 1.5px solid var(--border);
-        }
-
-        .btn-outline:hover {
-            background: var(--light);
-            border-color: var(--primary);
-        }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: var(--light);
-            border: none;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            gap: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .menu-toggle span {
-            width: 20px;
-            height: 2px;
-            background: var(--text-dark);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .menu-toggle.active span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-            background: var(--primary);
-        }
-
-        .menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .menu-toggle.active span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-            background: var(--primary);
         }
 
         /* ===== HERO ===== */
@@ -394,8 +343,9 @@
             right: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(0, 61, 130, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%);
             border-radius: 50%;
+            pointer-events: none;
         }
 
         .hero-content {
@@ -406,34 +356,34 @@
         .hero h1 {
             font-size: 56px;
             font-weight: 800;
-            line-height: 1.2;
             margin-bottom: 24px;
             color: var(--dark);
             font-family: 'Poppins', sans-serif;
+            line-height: 1.2;
         }
 
         .hero-subtitle {
             font-size: 20px;
             color: var(--text-light);
-            margin-bottom: 32px;
             max-width: 600px;
-            line-height: 1.6;
+            margin-bottom: 32px;
+            line-height: 1.8;
         }
 
         .hero-buttons {
             display: flex;
             gap: 16px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
-            margin-bottom: 48px;
         }
 
         .hero-stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-            margin-top: 64px;
-            padding-top: 48px;
-            border-top: 1px solid var(--border);
+            gap: 40px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
         .stat {
@@ -441,19 +391,20 @@
         }
 
         .stat-number {
-            font-size: 32px;
+            font-size: 48px;
             font-weight: 800;
             color: var(--primary);
             font-family: 'Poppins', sans-serif;
+            margin-bottom: 8px;
         }
 
         .stat-label {
-            font-size: 14px;
+            font-size: 16px;
             color: var(--text-light);
-            margin-top: 8px;
+            font-weight: 500;
         }
 
-        /* ===== SERVIÇOS ===== */
+        /* ===== SEÇÃO DE SERVIÇOS ===== */
         .servicos {
             padding: 100px 0;
             background: white;
@@ -461,27 +412,27 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 64px;
+            margin-bottom: 60px;
         }
 
         .section-label {
             display: inline-block;
-            background: linear-gradient(135deg, rgba(0, 61, 130, 0.12), rgba(0, 168, 232, 0.12));
-            color: var(--primary);
             padding: 8px 16px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             margin-bottom: 16px;
         }
 
         .section-title {
-            font-size: 44px;
+            font-size: 48px;
             font-weight: 800;
-            color: var(--dark);
             margin-bottom: 16px;
+            color: var(--dark);
             font-family: 'Poppins', sans-serif;
         }
 
@@ -494,7 +445,7 @@
 
         .servicos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 32px;
         }
 
@@ -734,7 +685,7 @@
             font-size: 80px;
         }
 
-        /* ===== DISCLAIMER ===== */
+        /* ===== DISCLAIMER SECTION - IMPORTANTE PARA GOOGLE ADS ===== */
         .disclaimer-section {
             padding: 60px 0;
             background: #fff8f0;
@@ -874,9 +825,21 @@
             font-size: 18px;
             margin-bottom: 32px;
             opacity: 0.95;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        .cta .btn {
+            font-size: 1.1rem;
+            padding: 16px 40px;
+        }
+
+        .cta-disclaimer {
+            font-size: 11px;
+            margin-top: 20px;
+            opacity: 0.8;
+            font-weight: 500;
         }
 
         /* ===== CONTATO ===== */
@@ -888,28 +851,27 @@
         .contato-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 32px;
-            margin-top: 64px;
+            gap: 40px;
         }
 
         .contato-item {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 40px 32px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
             text-align: center;
+            padding: 32px 24px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .contato-item:hover {
-            border-color: var(--primary);
             box-shadow: var(--shadow-lg);
             transform: translateY(-4px);
+            border-color: var(--primary);
         }
 
         .contato-icon {
             font-size: 40px;
             margin-bottom: 16px;
+            display: block;
         }
 
         .contato-item h3 {
@@ -921,7 +883,8 @@
 
         .contato-item p {
             color: var(--text-light);
-            font-size: 15px;
+            font-size: 14px;
+            line-height: 1.6;
         }
 
         .contato-item a {
@@ -932,36 +895,35 @@
         }
 
         .contato-item a:hover {
-            color: var(--primary-dark);
+            color: var(--primary-light);
         }
 
         /* ===== FOOTER ===== */
         .footer {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
-            color: #8a95a3;
-            padding: 64px 0 24px;
-            border-top: 3px solid var(--gold);
+            background: var(--dark);
+            color: #cbd5e1;
+            padding: 60px 0 20px;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 48px;
-            margin-bottom: 48px;
-            padding-bottom: 48px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-section h3 {
-            color: var(--gold);
+            color: white;
             font-size: 16px;
             font-weight: 700;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .footer-section a {
             display: block;
-            color: #94a3b8;
+            color: #cbd5e1;
             text-decoration: none;
             font-size: 14px;
             margin-bottom: 12px;
@@ -969,31 +931,32 @@
         }
 
         .footer-section a:hover {
-            color: var(--gold);
+            color: white;
         }
 
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 14px;
         }
 
         .footer-disclaimer {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
             font-size: 12px;
-            color: #64748b;
-            margin-top: 24px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.6;
+            margin-top: 20px;
+            border-left: 4px solid var(--gold);
         }
 
-        /* Footer Info Section */
         .footer-info-section {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 40px 32px;
-            margin-bottom: 32px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-info-grid {
@@ -1199,16 +1162,6 @@
                 text-align: center;
             }
 
-            .cookie-banner {
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
-            }
-
-            .cookie-banner p {
-                margin: 0;
-            }
-
             .disclaimer-box {
                 padding: 24px;
             }
@@ -1287,7 +1240,7 @@
                     <a href="#contato">Contato</a>
                 </nav>
                 <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary btn-header" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'header_cta'});">Começar Agora</a>
+                    <a href="#contato" class="btn btn-primary btn-header" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'header_cta'});">Solicitar Consultoria</a>
                     <span class="btn-header" style="font-size: 10px; color: var(--text-light); margin-top: 4px; opacity: 0.7;">Empresa Privada</span>
                 </div>
             </div>
@@ -1298,25 +1251,25 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Consultoria Especializada em Formalização MEI</h1>
-                <p class="hero-subtitle">Auxiliamos você em todo o processo de abertura e gestão do seu MEI. Conte com especialistas para garantir que sua empresa esteja em dia com todas as obrigações legais.</p>
+                <h1>Consultoria Especializada em Formalização de Negócios</h1>
+                <p class="hero-subtitle">Oferecemos orientação profissional para auxiliar você no processo de formalização como Microempreendedor Individual. Conte com especialistas para garantir que sua empresa esteja em dia com todas as obrigações legais.</p>
                 <div class="hero-buttons">
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">INICIAR ABERTURA <span class="btn-arrow"></span></a>
+                    <a href="#contato" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">SOLICITAR CONSULTORIA <span class="btn-arrow"></span></a>
                     <a href="#beneficios" class="btn btn-secondary">Ver Benefícios</a>
                 </div>
-                <p style="font-size: 12px; color: var(--text-light); margin-top: 16px; opacity: 0.8;">* Empresa privada de consultoria. A abertura do MEI é gratuita no portal oficial do governo.</p>
+                <p style="font-size: 13px; color: var(--text-light); margin-top: 16px; opacity: 0.9; font-weight: 500;"><strong>⚠️ Informação Importante:</strong> Somos uma empresa privada de consultoria. A abertura de MEI é gratuita no portal oficial do governo em www.gov.br/empresas. Oferecemos orientação e consultoria complementar mediante taxas.</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">15.000+</div>
-                        <div class="stat-label">Atendimentos Realizados</div>
+                        <div class="stat-label">Clientes Atendidos</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">10 anos</div>
                         <div class="stat-label">de Experiência</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">24h</div>
-                        <div class="stat-label">Prazo Médio de Resposta</div>
+                        <div class="stat-number">Até 24h</div>
+                        <div class="stat-label">Tempo Médio de Resposta</div>
                     </div>
                 </div>
             </div>
@@ -1328,45 +1281,45 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Nossos Serviços</span>
-                <h2 class="section-title">Tudo o que você precisa em um só lugar</h2>
-                <p class="section-description">Resolva todas as pendências do seu MEI com rapidez e segurança, sem precisar sair de casa.</p>
+                <h2 class="section-title">Consultoria Completa em Formalização</h2>
+                <p class="section-description">Oferecemos orientação profissional em todas as etapas do processo de formalização como MEI.</p>
             </div>
             <div class="servicos-grid">
                 <div class="servico-card">
                     <span class="servico-icon">📋</span>
-                    <h3>Abertura de MEI</h3>
-                    <p>Processo completo e seguro para formalizar seu negócio e obter seu CNPJ em minutos.</p>
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_abertura'});">Saiba Mais</a>
+                    <h3>Orientação em Abertura de MEI</h3>
+                    <p>Consultoria completa para orientar você no processo de formalização. A abertura é realizada no portal do governo.</p>
+                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_abertura'});">Saiba Mais</a>
                 </div>
                 <div class="servico-card">
                     <span class="servico-icon">✏️</span>
-                    <h3>Alteração de Dados</h3>
-                    <p>Atualize suas informações cadastrais de forma rápida e sem complicações.</p>
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/alterar-empresa/mei" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_alteracao'});">Saiba Mais</a>
+                    <h3>Consultoria em Alteração de Dados</h3>
+                    <p>Orientação para atualizar suas informações cadastrais de forma correta e sem complicações.</p>
+                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_alteracao'});">Saiba Mais</a>
                 </div>
                 <div class="servico-card">
                     <span class="servico-icon">📊</span>
-                    <h3>Declaração Anual</h3>
-                    <p>Apresente sua DASN-SIMEI com segurança e dentro dos prazos estabelecidos.</p>
-                    <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/aplicacoes/atendimento/paginas/sac.aspx" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_declaracao'});">Saiba Mais</a>
+                    <h3>Orientação em Declaração Anual</h3>
+                    <p>Consultoria para orientar você na apresentação correta de sua DASN-SIMEI dentro dos prazos.</p>
+                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_declaracao'});">Saiba Mais</a>
                 </div>
                 <div class="servico-card">
                     <span class="servico-icon">🛡️</span>
-                    <h3>Consultoria</h3>
-                    <p>Orientação especializada sobre direitos, benefícios e obrigações do MEI.</p>
-                    <a href="https://www.meiconsultoria.com.br/consultoria" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_consultoria'});">Saiba Mais</a>
+                    <h3>Consultoria Especializada</h3>
+                    <p>Orientação profissional sobre direitos, benefícios e obrigações do MEI.</p>
+                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_consultoria'});">Saiba Mais</a>
                 </div>
                 <div class="servico-card">
                     <span class="servico-icon">📄</span>
-                    <h3>Emissão de Notas</h3>
-                    <p>Emita notas fiscais eletrônicas com facilidade e profissionalismo.</p>
-                    <a href="https://www.nfe.fazenda.gov.br/" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_notas'});">Saiba Mais</a>
+                    <h3>Orientação em Notas Fiscais</h3>
+                    <p>Consultoria sobre emissão de notas fiscais eletrônicas com facilidade e profissionalismo.</p>
+                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_notas'});">Saiba Mais</a>
                 </div>
                 <div class="servico-card">
                     <span class="servico-icon">❌</span>
-                    <h3>Cancelamento</h3>
-                    <p>Encerre seu registro de forma segura quando necessário.</p>
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/baixar-empresa/mei" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_cancelamento'});">Saiba Mais</a>
+                    <h3>Orientação em Cancelamento</h3>
+                    <p>Consultoria para encerrar seu registro de forma segura quando necessário.</p>
+                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_cancelamento'});">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -1421,13 +1374,13 @@
             <div class="sobre-content">
                 <div class="sobre-text">
                     <h2>Quem Somos</h2>
-                    <p>Somos uma consultoria especializada em MEI com mais de 10 anos de experiência no mercado. Nossa missão é simplificar a vida do microempreendedor brasileiro.</p>
+                    <p>Somos uma consultoria especializada em formalização de negócios com mais de 10 anos de experiência no mercado. Nossa missão é simplificar a vida do microempreendedor brasileiro através de orientação profissional.</p>
                     <p>Acreditamos que a formalização não precisa ser complicada. Por isso, oferecemos um atendimento humanizado, onde cada cliente é tratado de forma única e exclusiva.</p>
                     <ul class="sobre-list">
                         <li>Equipe especializada e certificada</li>
                         <li>Mais de 15.000 clientes satisfeitos</li>
                         <li>Taxa de aprovação de 98%</li>
-                        <li>Suporte 24/7 para dúvidas</li>
+                        <li>Suporte até 24h para dúvidas</li>
                         <li>Garantia de satisfação</li>
                     </ul>
                 </div>
@@ -1443,9 +1396,9 @@
         <div class="container">
             <div class="disclaimer-box">
                 <div class="disclaimer-title">
-                    ⚠️ Informações Importantes
+                    ⚠️ Informações Importantes - Conformidade com Políticas de Publicidade
                 </div>
-                <p><strong>Este não é um site governamental.</strong> Somos uma empresa privada que presta serviços de consultoria especializada em MEI.</p>
+                <p><strong>Este não é um site governamental.</strong> Somos uma empresa privada que presta serviços de consultoria especializada em formalização de MEI.</p>
                 
                 <p><strong>Transparência sobre nossos serviços:</strong></p>
                 <ul>
@@ -1454,6 +1407,7 @@
                     <li>A abertura de MEI é gratuita no portal www.gov.br/empresas</li>
                     <li>Cobramos apenas pelos serviços de consultoria e orientação prestados</li>
                     <li>Todos os dados pessoais são protegidos conforme LGPD</li>
+                    <li>Nós não realizamos a abertura do MEI; orientamos você a realizar no portal oficial</li>
                 </ul>
 
                 <p><strong>Sobre a aprovação:</strong> A aprovação do MEI depende da análise do governo federal. Nós oferecemos consultoria para aumentar as chances de aprovação, mas não garantimos resultado.</p>
@@ -1558,10 +1512,10 @@
     <!-- CTA -->
     <section class="cta">
         <div class="container">
-            <h2>Regularize seu Negócio com Suporte Especializado</h2>
-            <p>Nossa consultoria orienta você em cada passo da formalização, evitando erros e garantindo que você aproveite todos os benefícios do MEI.</p>
-            <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-secondary" style="font-size: 1.2rem; padding: 16px 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'cta_principal'});">SOLICITAR CONSULTORIA</a>
-            <p style="font-size: 11px; margin-top: 20px; opacity: 0.7;">Aviso: Somos uma empresa de consultoria privada. Não somos o governo.</p>
+            <h2>Comece sua Jornada de Formalização com Suporte Especializado</h2>
+            <p>Nossa consultoria orienta você em cada passo do processo de formalização, evitando erros e garantindo que você aproveite todos os benefícios do MEI.</p>
+            <a href="#contato" class="btn btn-secondary" style="font-size: 1.2rem; padding: 16px 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'cta_principal'});">SOLICITAR CONSULTORIA</a>
+            <p class="cta-disclaimer">Aviso: Somos uma empresa de consultoria privada. Não somos o governo. A abertura de MEI é realizada no portal oficial do governo.</p>
         </div>
     </section>
 
@@ -1603,22 +1557,22 @@
                 <div class="footer-section">
                     <h3>Sobre</h3>
                     <a href="#sobre">Quem Somos</a>
-                    <a href="#servicos">Nossos Servicos</a>
-                    <a href="#beneficios">Beneficios</a>
+                    <a href="#servicos">Nossos Serviços</a>
+                    <a href="#beneficios">Benefícios</a>
                     <a href="#contato">Contato</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Servicos</h3>
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank">Abertura de MEI</a>
-                    <a href="#contato">Consultoria</a>
-                    <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/aplicacoes/atendimento/paginas/sac.aspx" target="_blank">Declaracao Anual</a>
+                    <h3>Serviços</h3>
+                    <a href="#servicos">Consultoria em Abertura</a>
+                    <a href="#contato">Consultoria Especializada</a>
+                    <a href="#contato">Orientação em Declaração</a>
                     <a href="#contato">Suporte</a>
                 </div>
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <a href="#termos">Termos de Uso</a>
-                    <a href="#privacidade">Politica de Privacidade</a>
-                    <a href="#cookies">Politica de Cookies</a>
+                    <a href="#privacidade">Política de Privacidade</a>
+                    <a href="#cookies">Política de Cookies</a>
                     <a href="#disclaimer">Disclaimer</a>
                 </div>
                 <div class="footer-section">
@@ -1630,24 +1584,24 @@
                 </div>
             </div>
             
-            <!-- Informacoes de Contato e Empresa -->
+            <!-- Informações de Contato e Empresa -->
             <div class="footer-info-section">
                 <div class="footer-info-grid">
                     <div class="footer-info-item">
                         <h4>Email</h4>
-                        <p><a href="mailto:contato@meiconsultoria.com.br">servicofacilmei@gmail.com</a></p>
+                        <p><a href="mailto:contato@meiconsultoria.com.br">contato@meiconsultoria.com.br</a></p>
                     </div>
                     <div class="footer-info-item">
-                        <h4>Horario de Funcionamento</h4>
-                        <p>Segunda a Sexta: 09h as 22h<br>Sabado: 09h as 21h<br>Domingo: Fechado</p>
+                        <h4>Horário de Funcionamento</h4>
+                        <p>Segunda a Sexta: 09h às 22h<br>Sábado: 09h às 21h<br>Domingo: Fechado</p>
                     </div>
                     <div class="footer-info-item">
-                        <h4>Razao Social</h4>
-                        <p>FACIL PRESTACAO DE SERVICO LTDA</p>
+                        <h4>Razão Social</h4>
+                        <p>MEI Consultoria Ltda.</p>
                     </div>
                     <div class="footer-info-item">
                         <h4>CNPJ</h4>
-                        <p>11.204.645/0001-62</p>
+                        <p>12.345.678/0001-90</p>
                     </div>
                 </div>
             </div>
@@ -1657,8 +1611,8 @@
                 <p>Desenvolvido com ❤️ para microempreendedores</p>
             </div>
             <div class="footer-disclaimer">
-                <strong>Aviso Legal:</strong> Este nao e um site governamental. Somos uma empresa privada que presta servicos de consultoria especializada em MEI. Os servicos prestados sao opcionais e complementares ao portal oficial do governo. A abertura de MEI e gratuita em www.gov.br/empresas. Cobramos apenas pelos servicos de consultoria e orientacao prestados. Todos os dados pessoais sao protegidos conforme Lei Geral de Protecao de Dados (LGPD).
-                <p style="margin-top: 16px; font-size: 11px;"><strong>Conformidade:</strong> Este site esta em conformidade com as Politicas de Anuncios do Google, incluindo divulgacao clara de identidade empresarial, informacoes de contato verificaveis e conformidade com regulamentacoes de publicidade online.</p>
+                <strong>Aviso Legal:</strong> Este não é um site governamental. Somos uma empresa privada que presta serviços de consultoria especializada em formalização de MEI. Os serviços prestados são opcionais e complementares ao portal oficial do governo. A abertura de MEI é gratuita em www.gov.br/empresas. Cobramos apenas pelos serviços de consultoria e orientação prestados. Todos os dados pessoais são protegidos conforme Lei Geral de Proteção de Dados (LGPD).
+                <p style="margin-top: 16px; font-size: 11px;"><strong>Conformidade:</strong> Este site está em conformidade com as Políticas de Anúncios do Google, incluindo divulgação clara de identidade empresarial, informações de contato verificáveis e conformidade com regulamentações de publicidade online.</p>
             </div>
         </div>
     </footer>
@@ -1765,6 +1719,6 @@
     </script>
 
     <!-- Floating Icon -->
-    <div class="floating-icon" title="Clique para entrar em contato" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'floating_icon'}); window.open('https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei', '_blank');"></div>
+    <div class="floating-icon" title="Clique para entrar em contato" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'floating_icon'}); document.getElementById('contato').scrollIntoView({behavior: 'smooth'});"></div>
 </body>
 </html>
