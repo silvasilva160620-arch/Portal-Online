@@ -263,6 +263,69 @@
             color: white;
         }
 
+        .btn-arrow {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-left: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+            animation: slideArrow 2s ease-in-out infinite;
+        }
+
+        .btn-arrow::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 2px;
+            background: currentColor;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            border-radius: 1px;
+        }
+
+        .btn-arrow::after {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-top: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%) rotate(45deg);
+            border-radius: 1px;
+        }
+
+        .btn-primary .btn-arrow {
+            animation: slideArrow 2s ease-in-out infinite;
+        }
+
+        .btn-primary:hover .btn-arrow {
+            animation: slideArrowHover 0.5s ease-out forwards;
+        }
+
+        @keyframes slideArrow {
+            0%, 100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+            50% {
+                transform: translateX(4px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideArrowHover {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(6px);
+            }
+        }
+
         .btn-outline {
             background: transparent;
             color: var(--text-dark);
@@ -1233,7 +1296,7 @@
                 <h1>Consultoria Especializada em Formalização MEI</h1>
                 <p class="hero-subtitle">Auxiliamos você em todo o processo de abertura e gestão do seu MEI. Conte com especialistas para garantir que sua empresa esteja em dia com todas as obrigações legais.</p>
                 <div class="hero-buttons">
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px; animation: pulse 2s infinite;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">INICIAR ABERTURA <span style="margin-left: 8px;">→</span></a>
+                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">INICIAR ABERTURA <span class="btn-arrow"></span></a>
                     <a href="#beneficios" class="btn btn-secondary">Ver Benefícios</a>
                 </div>
                 <p style="font-size: 12px; color: var(--text-light); margin-top: 16px; opacity: 0.8;">* Empresa privada de consultoria. A abertura do MEI é gratuita no portal oficial do governo.</p>
