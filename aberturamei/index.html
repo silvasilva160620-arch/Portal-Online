@@ -3,390 +3,794 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEI Fácil - Abra seu CNPJ MEI com Suporte Especializado</title>
-    <meta name="description" content="Assessoria completa para abrir seu MEI de forma rápida e segura. Processo 100% digital com suporte de especialistas em todo o Brasil.">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google tag (gtag.js ) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17386030121"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag( ){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17386030121');
-    </script>
+    <meta name="description" content="Abra seu MEI com segurança e rapidez. Consultoria especializada para Microempreendedor Individual em todo Brasil.">
+    <meta name="keywords" content="MEI, CNPJ, abertura de MEI, consultoria MEI, microempreendedor individual">
+    <title>Consultoria MEI Brasil - Abra seu CNPJ com Segurança</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #003d82;
+            --secondary-blue: #0052a3;
+            --accent-yellow: #ffd700;
+            --light-gray: #f5f5f5;
+            --medium-gray: #666666;
+            --dark-gray: #333333;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+            --success-green: #27ae60;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        /* Header e Navegação */
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .btn-header {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-header:hover {
+            background-color: #ffed4e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-yellow);
+            color: var(--primary-blue);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffed4e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--white);
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Container Padrão */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Seção de Requisitos */
+        .requirements {
+            padding: 4rem 2rem;
+            background-color: var(--light-gray);
+        }
+
+        .requirements h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .requirement-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .requirement-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .requirement-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .requirement-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .requirement-card p {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Seção de Benefícios */
+        .benefits {
+            padding: 4rem 2rem;
+        }
+
+        .benefits h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-yellow);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            transform: translateX(5px);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .benefit-card p {
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* Seção de Depoimentos */
+        .testimonials {
+            padding: 4rem 2rem;
+            background-color: var(--light-gray);
+        }
+
+        .testimonials h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--accent-yellow);
+        }
+
+        .testimonial-text {
+            color: var(--medium-gray);
+            margin-bottom: 1rem;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+        }
+
+        .testimonial-role {
+            color: var(--medium-gray);
+            font-size: 0.85rem;
+        }
+
+        /* Seção de FAQ */
+        .faq {
+            padding: 4rem 2rem;
+        }
+
+        .faq h2 {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+            text-align: center;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-blue);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background-color: #efefef;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--medium-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        /* Seção de CTA Final */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-yellow);
+        }
+
+        .footer-disclaimer {
+            font-size: 0.85rem;
+            color: #cccccc;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #555555;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
+            .requirements-grid,
+            .benefits-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Utilitários */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <h2>MEI Fácil</h2>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#inicio" class="nav-link">Início</a></li>
-                    <li><a href="#vantagens" class="nav-link">Vantagens</a></li>
-                    <li><a href="#como-funciona" class="nav-link">Como Funciona</a></li>
-                    <li><a href="#faq" class="nav-link">Dúvidas</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-                <a href="#formulario" class="btn btn-primary">Abrir MEI Agora</a>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">M</div>
+                <span>Consultoria MEI Brasil</span>
             </div>
-        </nav>
+            <nav>
+                <a href="#beneficios">Benefícios</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contato">Contato</a>
+                <button class="btn-header" onclick="abrirMEI()">Abrir MEI</button>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Abra seu CNPJ MEI com 
-                    <span class="highlight">suporte de especialistas</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Processo simples, rápido e 100% digital para formalizar seu negócio.
-                </p>
-                <p class="hero-description">
-                    Evite burocracia e erros. Nossa assessoria garante que sua abertura de MEI seja feita corretamente, com atendimento humanizado em todo o Brasil.
-                </p>
-                <a href="#formulario" class="btn btn-primary btn-large">
-                    <i class="fas fa-rocket"></i>
-                    Quero Abrir meu MEI
-                </a>
-                <div class="hero-security">
-                    <i class="fas fa-lock"></i>
-                    <span>Seus dados estão 100% seguros conosco.</span>
-                </div>
-            </div>
-            <div class="hero-form">
-                <div class="form-card">
-                    <h3>Comece a formalização agora</h3>
-                    <p>Preencha seus dados para que um de nossos especialistas inicie seu processo de abertura.</p>
-                    <form id="hero-form" class="quick-form">
-                        <input type="text" name="nome" placeholder="Seu nome completo" required>
-                        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-                        <input type="tel" name="telefone" placeholder="Seu WhatsApp com DDD" required>
-                        <button type="submit" class="btn btn-success btn-full">
-                            Iniciar Abertura do MEI
-                        </button>
-                    </form>
-                    <div class="form-security">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Garantimos a segurança e o sigilo dos seus dados.</span>
-                    </div>
-                </div>
+    <section class="hero">
+        <div class="hero-container fade-in">
+            <h1>Abra seu MEI com Segurança e Rapidez</h1>
+            <p>Consultoria especializada para Microempreendedor Individual em todo o Brasil. Formalize seu negócio em poucos minutos com nosso suporte profissional.</p>
+            <div class="cta-buttons">
+                <button class="btn-primary" onclick="abrirMEI()">Iniciar Abertura MEI</button>
+                <button class="btn-secondary" onclick="consultoria()">Solicitar Consultoria</button>
             </div>
         </div>
     </section>
 
-    <!-- Disclaimer -->
-    <section class="disclaimer">
+    <!-- Requisitos -->
+    <section class="requirements">
         <div class="container">
-            <h3><i class="fas fa-info-circle"></i> ATENÇÃO: NÃO SOMOS UM ÓRGÃO GOVERNAMENTAL</h3>
-            <p>
-                Somos uma empresa privada de assessoria e consultoria. <strong>A abertura do MEI pode ser feita gratuitamente e sem nosso auxílio através do Portal do Empreendedor oficial do Governo.</strong> Ao contratar nossos serviços, você paga por nossa expertise e suporte para garantir que o processo seja feito de forma rápida, correta e sem erros, além de receber orientação pós-abertura.
-            </p>
-        </div>
-    </section>
-
-    <!-- Requisitos Section -->
-    <section id="requisitos" class="requirements">
-        <div class="container">
-            <h2 class="section-title">Quem pode ser MEI?</h2>
+            <h2>Quem Pode Abrir um MEI?</h2>
             <div class="requirements-grid">
-                <div class="requirement-card">
-                    <div class="requirement-icon"><i class="fas fa-user-check"></i></div>
-                    <h3>Maior de 18 anos</h3>
-                    <p>Ou menor emancipado, brasileiro ou estrangeiro com visto permanente.</p>
+                <div class="requirement-card fade-in">
+                    <div class="requirement-icon">👤</div>
+                    <h3>Maioridade</h3>
+                    <p>Pessoa física maior de 18 anos ou entre 16-18 anos emancipado</p>
                 </div>
-                <div class="requirement-card">
-                    <div class="requirement-icon"><i class="fas fa-dollar-sign"></i></div>
-                    <h3>Faturamento até R$ 81 mil/ano</h3>
-                    <p>O limite de renda bruta anual estabelecido pela legislação vigente.</p>
-                </div>
-                <div class="requirement-card">
-                    <div class="requirement-icon"><i class="fas fa-building"></i></div>
-                    <h3>Não ser sócio de outra empresa</h3>
-                    <p>Você não pode ser titular, sócio ou administrador de outra empresa.</p>
-                </div>
-                <div class="requirement-card">
-                    <div class="requirement-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div class="requirement-card fade-in">
+                    <div class="requirement-icon">💼</div>
                     <h3>Atividade Permitida</h3>
-                    <p>Sua atividade profissional deve estar na lista de ocupações permitidas para o MEI.</p>
+                    <p>Atuar com uma das atividades permitidas pelo MEI</p>
+                </div>
+                <div class="requirement-card fade-in">
+                    <div class="requirement-icon">💰</div>
+                    <h3>Faturamento</h3>
+                    <p>Faturamento limitado a R$ 81.000,00 por ano (receita bruta)</p>
+                </div>
+                <div class="requirement-card fade-in">
+                    <div class="requirement-icon">🚫</div>
+                    <h3>Exclusividade</h3>
+                    <p>Não participar como sócio ou administrador de outra empresa</p>
+                </div>
+                <div class="requirement-card fade-in">
+                    <div class="requirement-icon">👥</div>
+                    <h3>Funcionários</h3>
+                    <p>Não ter empregado ou ter no máximo um funcionário</p>
+                </div>
+                <div class="requirement-card fade-in">
+                    <div class="requirement-icon">✅</div>
+                    <h3>Documentação</h3>
+                    <p>Ter CPF ativo e dados pessoais atualizados</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vantagens Section -->
-    <section id="vantagens" class="benefits">
+    <!-- Benefícios -->
+    <section class="benefits" id="beneficios">
         <div class="container">
-            <div class="benefits-header">
-                <h2 class="section-title">Vantagens de Formalizar seu Negócio</h2>
-                <p class="section-subtitle">Veja os benefícios que você adquire ao se tornar um Microempreendedor Individual.</p>
-            </div>
-            <div class="benefits-content">
-                <div class="benefits-image">
-                    <img data-src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=600" alt="Profissionais colaborando em um projeto" class="lazy">
+            <h2>Vantagens de Ser MEI</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <h3>📊 Regularização</h3>
+                    <p>Formalize seu negócio de forma simples e rápida, sem burocracia excessiva. Obtenha seu CNPJ em poucos minutos.</p>
                 </div>
-                <div class="benefits-list">
-                    <div class="benefit-item">
-                        <div class="benefit-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                        <div class="benefit-content">
-                            <h3>Emissão de Nota Fiscal</h3>
-                            <p>Venda para outras empresas e participe de licitações, transmitindo mais credibilidade.</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
-                        <div class="benefit-content">
-                            <h3>Direitos Previdenciários (INSS )</h3>
-                            <p>Acesso a aposentadoria, auxílio-doença, salário-maternidade e pensão por morte.</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon"><i class="fas fa-credit-card"></i></div>
-                        <div class="benefit-content">
-                            <h3>Acesso a Crédito Facilitado</h3>
-                            <p>Obtenha empréstimos, financiamentos e cartões de crédito com condições especiais para empresas.</p>
-                        </div>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon"><i class="fas fa-tags"></i></div>
-                        <div class="benefit-content">
-                            <h3>Impostos Simplificados e Reduzidos</h3>
-                            <p>Pague um valor fixo mensal (DAS) que cobre todos os impostos, simplificando sua contabilidade.</p>
-                        </div>
-                    </div>
+                <div class="benefit-card fade-in">
+                    <h3>🏦 Acesso Bancário</h3>
+                    <p>Abra conta bancária empresarial, acesse crédito e fortaleça suas parcerias comerciais com maior credibilidade.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <h3>🛡️ Benefícios INSS</h3>
+                    <p>Garanta acesso à previdência social com benefícios como aposentadoria, auxílio-doença e salário-maternidade.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <h3>📄 Notas Fiscais</h3>
+                    <p>Emita notas fiscais e atenda clientes maiores com mais facilidade, ampliando suas oportunidades de negócio.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <h3>💳 Empréstimos</h3>
+                    <p>Acesse linhas de crédito exclusivas com juros reduzidos e condições especiais para MEI.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <h3>🤝 Parcerias</h3>
+                    <p>Abra portas para parcerias comerciais e contratos mais vantajosos com grandes empresas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Como Funciona Section -->
-    <section id="como-funciona" class="how-it-works">
+    <!-- Depoimentos -->
+    <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Como Funciona Nossa Assessoria?</h2>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Preencha o Formulário</h3>
-                        <p>Você nos envia seus dados iniciais de forma rápida e segura.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Análise do Especialista</h3>
-                        <p>Nossa equipe valida seus dados e verifica a viabilidade da abertura.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Processamento nos Órgãos</h3>
-                        <p>Cuidamos de toda a burocracia junto aos sistemas do governo.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>CNPJ Emitido!</h3>
-                        <p>Em pouco tempo, seu CNPJ é emitido e seu negócio está formalizado.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>Suporte Pós-Abertura</h3>
-                        <p>Você recebe seu certificado e orientações sobre os próximos passos.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="steps-cta">
-                <p>Deixe a burocracia com a gente e foque no que realmente importa: seu negócio.</p>
-                <a href="#formulario" class="btn btn-primary">Começar Agora</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos Section -->
-    <section id="depoimentos" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+            <h2>O Que Nossos Clientes Dizem</h2>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Processo muito rápido e fácil. Consegui abrir meu MEI em poucos minutos sem sair de casa. O suporte foi excelente!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MS</div>
-                        <div class="author-info">
-                            <div class="author-name">Maria Silva</div>
-                            <div class="author-role">Consultora de Marketing</div>
-                        </div>
-                    </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">"Excelente serviço! Fiquei impressionado com a agilidade e o suporte. Me ajudaram em todas as etapas e tiraram todas as minhas dúvidas. Nota 10!"</p>
+                    <p class="testimonial-author">Lucas Pereira</p>
+                    <p class="testimonial-role">Fotógrafo Freelancer</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Estava com medo da burocracia, mas foi super simples. Em 15 minutos já tinha meu CNPJ em mãos. Recomendo!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JO</div>
-                        <div class="author-info">
-                            <div class="author-name">João Oliveira</div>
-                            <div class="author-role">Designer Gráfico</div>
-                        </div>
-                    </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">"Maravilhoso! Nunca imaginei que abrir um CNPJ pudesse ser tão fácil. O site é intuitivo e o atendimento foi impecável. Agora estou formalizada e super feliz!"</p>
+                    <p class="testimonial-author">Beatriz Lima</p>
+                    <p class="testimonial-role">Artesã</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p class="testimonial-text">"Finalmente consegui formalizar meu negócio! O processo foi transparente e o atendimento nota 10. Muito obrigada!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">AC</div>
-                        <div class="author-info">
-                            <div class="author-name">Ana Costa</div>
-                            <div class="author-role">Esteticista</div>
-                        </div>
-                    </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">"Adorei a experiência! Desde o primeiro contato até o recebimento do CNPJ, tudo foi muito rápido e profissional. Super indico para quem quer abrir o MEI sem complicação."</p>
+                    <p class="testimonial-author">Carlos Henrique</p>
+                    <p class="testimonial-role">Consultor Financeiro</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-text">"Ótima plataforma! Fiz todo o processo de abertura do MEI pelo celular e foi super tranquilo. Atendimento excelente e muita eficiência. Parabéns à equipe!"</p>
+                    <p class="testimonial-author">Fernanda Oliveira</p>
+                    <p class="testimonial-role">Personal Trainer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq">
+    <!-- FAQ -->
+    <section class="faq" id="faq">
         <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
+            <h2>Perguntas Frequentes</h2>
             <div class="faq-container">
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>O serviço de vocês é pago? A abertura do MEI não é gratuita?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>O que é MEI?</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim, nosso serviço é pago. A abertura do MEI é gratuita e pode ser feita diretamente no Portal do Empreendedor do Governo. Nosso serviço de assessoria privada existe para auxiliar quem busca comodidade, segurança e suporte especializado para evitar erros e burocracia durante e após o processo.</p>
+                        <p>MEI significa Microempreendedor Individual. É um profissional autônomo que se cadastra formalmente e obtém um CNPJ. Isso facilita a abertura de conta bancária, pedidos de empréstimos, emissão de notas fiscais e oferece direitos e obrigações de uma pessoa jurídica.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>O que é MEI?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quanto custa abrir um MEI?</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>MEI (Microempreendedor Individual) é um modelo empresarial simplificado para autônomos e pequenos empreendedores. Permite ter um CNPJ, emitir notas fiscais e ter acesso a benefícios previdenciários com uma carga tributária reduzida e simplificada.</p>
+                        <p>O registro de MEI é gratuito no portal oficial do governo. Nosso serviço de consultoria e assessoria especializada custa R$ 193,00, oferecendo suporte profissional e agilidade no processo. Você também pode fazer o registro gratuitamente diretamente no site do governo.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quanto custa para manter o MEI?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Quais são os benefícios de ser MEI?</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>O MEI tem um custo mensal fixo e baixo, pago através do Documento de Arrecadação do Simples Nacional (DAS). Esse valor cobre a contribuição para o INSS e os impostos (ICMS e/ou ISS), e varia um pouco dependendo da sua atividade (comércio, serviços ou ambos).</p>
+                        <p>Os principais benefícios são: regularização sem burocracia, cobertura previdenciária (INSS), acesso a serviços bancários, emissão de notas fiscais, acesso a crédito com juros reduzidos, e possibilidade de parcerias comerciais com empresas maiores.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Depois de abrir o MEI, já posso emitir nota fiscal?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Como emitir nota fiscal como MEI?</span>
+                        <span class="faq-toggle">▼</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Assim que seu CNPJ MEI é criado, você precisa se cadastrar nos sistemas da prefeitura da sua cidade (para notas de serviço) ou da secretaria da fazenda do seu estado (para notas de venda). Nossa assessoria inclui orientações sobre como realizar esses cadastros.</p>
+                        <p>O MEI não é obrigado a emitir nota fiscal para pessoas físicas. Porém, para vendas ou prestação de serviços para pessoas jurídicas, é obrigatória a emissão. Consulte a prefeitura da sua cidade para saber qual o procedimento na sua região e se há disponibilidade de Nota Fiscal Eletrônica.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Qual é o limite de faturamento para MEI?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O limite de faturamento para MEI é de R$ 81.000,00 por ano, o que equivale a aproximadamente R$ 6.750,00 por mês. Se ultrapassar este valor, você precisará migrar para outra categoria de empresa.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Formulário Section -->
-    <section id="formulario" class="form-section">
+    <!-- CTA Final -->
+    <section class="final-cta" id="contato">
         <div class="container">
-            <div class="form-content">
-                <div class="form-info">
-                    <h2>Pronto para Formalizar seu Negócio?</h2>
-                    <p>Preencha o formulário e nossa equipe de especialistas entrará em contato para dar início ao processo de abertura do seu MEI com total segurança.</p>
-                    <div class="form-benefits">
-                        <div class="form-benefit"><i class="fas fa-check-circle"></i><span>Processo 100% digital e seguro</span></div>
-                        <div class="form-benefit"><i class="fas fa-check-circle"></i><span>Suporte de especialistas no assunto</span></div>
-                        <div class="form-benefit"><i class="fas fa-check-circle"></i><span>CNPJ emitido rapidamente e sem erros</span></div>
-                    </div>
-                </div>
-                <div class="main-form">
-                    <form id="main-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="nome">Nome completo *</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefone">WhatsApp com DDD *</label>
-                            <input type="tel" id="telefone" name="telefone" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="atividade">Atividade que deseja exercer</label>
-                            <input type="text" id="atividade" name="atividade" placeholder="Ex: Consultoria, Design, Vendas...">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <i class="fas fa-rocket"></i>
-                            Quero Abrir meu MEI com Assessoria
-                        </button>
-                    </form>
-                </div>
-            </div>
+            <h2>Pronto para Formalizar seu Negócio?</h2>
+            <p>Não perca tempo! Comece seu processo de abertura de MEI agora mesmo com nosso suporte especializado.</p>
+            <button class="btn-primary" onclick="abrirMEI()">Iniciar Abertura MEI Agora</button>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contato" class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MEI Fácil Assessoria</h3>
-                    <p>Facilitamos a jornada do empreendedor com a abertura de MEI e suporte contínuo.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#vantagens">Vantagens</a></li>
-                        <li><a href="#como-funciona">Como Funciona</a></li>
-                        <li><a href="#faq">Dúvidas Frequentes</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade</a></li>
-                        <li><a href="/termos-de-uso.html" target="_blank" rel="noopener noreferrer">Termos de Uso</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p style="color: #d1d5db; font-size: 0.875rem;">
-                        <i class="fas fa-envelope"></i> contato@meifacilassessoria.com.br  
-
-                        <i class="fas fa-map-marker-alt"></i> Av. Exemplo, 123, Sala 45, São Paulo/SP
-                    </p>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#" onclick="politicaPrivacidade(); return false;">Política de Privacidade</a>
+                <a href="#" onclick="termosUso(); return false;">Termos de Uso</a>
+                <a href="#" onclick="contato(); return false;">Contato</a>
+                <a href="#" onclick="sobre(); return false;">Sobre</a>
             </div>
-            <div class="footer-bottom">
-                <p>MEI Fácil Assessoria LTDA - CNPJ: 00.000.000/0001-00</p>
-                <p>&copy; 2026 MEI Fácil Assessoria. Todos os direitos reservados.</p>
-                <p class="footer-disclaimer">Este é um site de uma empresa privada e não possui vínculo com o Governo. O serviço oficial e gratuito é oferecido pelo Portal do Empreendedor.</p>
+            <p>&copy; 2024 Consultoria MEI Brasil. Todos os direitos reservados.</p>
+            <div class="footer-disclaimer">
+                <p><strong>Aviso Importante:</strong> Este é um serviço de consultoria e apoio ao Microempreendedor Individual (MEI), não um site governamental. Todos os processos de registro, alteração e encerramento de CNPJ MEI podem ser realizados gratuitamente nas plataformas oficiais do governo. Oferecemos um serviço privado e opcional de assessoria especializada para simplificar sua jornada.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Funções de navegação - Botões levam para links específicos
+        function abrirMEI() {
+            // Link de exemplo - substitua pela URL real do seu serviço
+            window.location.href = 'https://www.gov.br/cidadania/pt-br/acesso-a-informacao/acoes-e-programas/mei';
+            // Você pode usar qualquer link aqui, como:
+            // window.location.href = 'https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATBPI/FCE/ConsultaPublica/ConsultaPublicaAbertura.aspx';
+        }
+
+        function consultoria() {
+            // Link de exemplo - substitua pela URL real do seu formulário de consultoria
+            window.location.href = 'https://api.whatsapp.com/send?phone=5511999999999&text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20abertura%20de%20MEI';
+        }
+
+        function contato() {
+            alert('Email: contato@consultoriamei.com.br\nTelefone: (11) 9999-9999\nHorário: Seg-Sex 08:00-18:00');
+        }
+
+        function politicaPrivacidade() {
+            alert('Política de Privacidade:\n\nSeus dados são utilizados apenas para fins de uso interno em nossa plataforma e não são compartilhados com terceiros sem seu consentimento.');
+        }
+
+        function termosUso() {
+            alert('Termos de Uso:\n\nAo utilizar nossos serviços, você concorda com os termos estabelecidos. Consulte nosso site para mais detalhes.');
+        }
+
+        function sobre() {
+            alert('Sobre Nós:\n\nSomos uma empresa especializada em consultoria para Microempreendedores Individuais, com mais de 80 mil clientes atendidos em todo o Brasil.');
+        }
+
+        // Função para toggle de FAQ
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Animação de fade-in ao carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
