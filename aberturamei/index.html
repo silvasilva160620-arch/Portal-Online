@@ -146,6 +146,7 @@
             margin: 0 auto;
             padding: 0 24px;
             width: 100%;
+            overflow: hidden;
         }
 
         /* ===== HEADER ===== */
@@ -164,6 +165,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 16px 0;
+            width: 100%;
         }
 
         .logo {
@@ -714,12 +716,13 @@
 
         /* ===== CTA ===== */
         .cta {
-            padding: 80px 0;
+            padding: 80px 24px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             border-radius: 16px;
             text-align: center;
             color: white;
-            margin: 100px 24px;
+            margin: 100px auto;
+            max-width: calc(100% - 48px);
         }
 
         .cta h2 {
@@ -1023,7 +1026,9 @@
 
             .cta {
                 padding: 60px 20px;
-                margin: 60px 20px;
+                margin: 60px auto;
+                max-width: calc(100% - 32px);
+                border-radius: 12px;
             }
 
             .cta h2 {
