@@ -910,6 +910,12 @@
             }
         }
 
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 82, 204, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(0, 82, 204, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 82, 204, 0); }
+        }
+
         /* ===== RESPONSIVO ===== */
         @media (max-width: 768px) {
             .footer-info-grid {
@@ -1152,16 +1158,16 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Formalize seu Negócio com Segurança</h1>
-                <p class="hero-subtitle">Consultoria especializada em MEI. Simplificamos a burocracia para que você foque no crescimento do seu negócio.</p>
+                <h1>Tenha seu CNPJ MEI em menos de 24 horas</h1>
+                <p class="hero-subtitle">Formalize seu negócio sem burocracia, garanta seus direitos previdenciários e comece a emitir notas fiscais hoje mesmo com nossa consultoria especializada.</p>
                 <div class="hero-buttons">
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">Abrir MEI Agora</a>
-                    <a href="https://www.meiconsultoria.com.br/sobre" class="btn btn-secondary" target="_blank">Saiba Mais</a>
+                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px; animation: pulse 2s infinite;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">QUERO MEU CNPJ AGORA</a>
+                    <a href="#beneficios" class="btn btn-secondary">Ver Benefícios</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">5.000+</div>
-                        <div class="stat-label">Clientes Satisfeitos</div>
+                        <div class="stat-label">Empresas Abertas</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">98%</div>
@@ -1181,8 +1187,8 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Nossos Serviços</span>
-                <h2 class="section-title">Soluções Completas para MEI</h2>
-                <p class="section-description">Oferecemos uma gama completa de serviços para simplificar sua vida como microempreendedor.</p>
+                <h2 class="section-title">Tudo o que você precisa em um só lugar</h2>
+                <p class="section-description">Resolva todas as pendências do seu MEI com rapidez e segurança, sem precisar sair de casa.</p>
             </div>
             <div class="servicos-grid">
                 <div class="servico-card">
@@ -1411,9 +1417,9 @@
     <!-- CTA -->
     <section class="cta">
         <div class="container">
-            <h2>Pronto para Formalizar seu Negócio?</h2>
-            <p>Deixe que nossos especialistas cuidem de toda a burocracia enquanto você foca no crescimento do seu negócio.</p>
-            <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-secondary" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'cta_principal'});">Começar Agora</a>
+            <h2>Não perca mais tempo na informalidade</h2>
+            <p>Junte-se a mais de 5.000 empreendedores que formalizaram seus negócios com nossa ajuda. Rápido, seguro e sem complicações.</p>
+            <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-secondary" style="font-size: 1.2rem; padding: 16px 40px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'cta_principal'});">COMEÇAR MINHA FORMALIZAÇÃO</a>
         </div>
     </section>
 
