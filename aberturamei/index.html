@@ -21,15 +21,12 @@
             --secondary-blue: #0066ff;
             --accent-gold: #f59e0b;
             --accent-gold-hover: #fcd34d;
-            --success-green: #10b981;
-            --warning-orange: #f97316;
             --light-bg: #f8fafc;
             --white: #ffffff;
             --text-dark: #1e293b;
             --text-gray: #64748b;
             --text-light: #94a3b8;
             --border-light: #e2e8f0;
-            --border-gray: #cbd5e1;
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
             --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
             --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -50,8 +47,9 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Poppins', sans-serif;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1.2;
+            color: var(--primary-dark);
         }
 
         h1 {
@@ -169,11 +167,6 @@
             box-shadow: var(--shadow-lg);
         }
 
-        .btn-header:active {
-            transform: translateY(0);
-        }
-
-        /* Mobile Menu Button */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -190,11 +183,6 @@
             color: var(--accent-gold);
         }
 
-        .mobile-menu-btn.active {
-            color: var(--accent-gold);
-        }
-
-        /* Mobile Menu */
         .mobile-nav {
             display: none;
             position: absolute;
@@ -248,22 +236,23 @@
 
         /* Section Styles */
         section {
-            padding: 5rem 1.5rem;
+            padding: 5.5rem 1.5rem;
         }
 
         section h2 {
-            margin-bottom: 1rem;
-            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+            text-align: center;
         }
 
         .section-subtitle {
             font-size: 1.05rem;
             color: var(--text-gray);
-            margin-bottom: 3rem;
-            max-width: 600px;
+            margin-bottom: 3.5rem;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
+            line-height: 1.7;
         }
 
         /* Hero Section */
@@ -287,8 +276,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(0, 102, 255, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 20% 50%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(0, 102, 255, 0.08) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -310,6 +299,7 @@
             line-height: 1.15;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             letter-spacing: -0.5px;
+            color: var(--white);
         }
 
         .hero-subtitle {
@@ -328,6 +318,7 @@
             line-height: 1.8;
             max-width: 600px;
             font-weight: 400;
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .cta-buttons {
@@ -437,22 +428,17 @@
             background-color: var(--light-bg);
         }
 
-        .requirements h2 {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
         .requirements-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
         }
 
         .requirement-card {
             background-color: var(--white);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
+            padding: 2.75rem 2.25rem;
+            border-radius: 14px;
             box-shadow: var(--shadow-md);
             transition: all 0.3s ease;
             border: 1px solid var(--border-light);
@@ -475,7 +461,7 @@
 
         .requirement-card:hover {
             box-shadow: var(--shadow-lg);
-            transform: translateY(-6px);
+            transform: translateY(-8px);
             border-color: var(--primary-blue);
         }
 
@@ -484,21 +470,22 @@
         }
 
         .requirement-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.75rem;
+            margin-bottom: 1.25rem;
             display: inline-block;
         }
 
         .requirement-card h3 {
             color: var(--primary-dark);
             margin-bottom: 0.75rem;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .requirement-card p {
             color: var(--text-gray);
             font-size: 0.95rem;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         /* Benefícios */
@@ -506,22 +493,17 @@
             background-color: var(--white);
         }
 
-        .benefits h2 {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
         }
 
         .benefit-card {
-            background: linear-gradient(135deg, rgba(0, 82, 204, 0.02) 0%, rgba(245, 158, 11, 0.02) 100%);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(0, 82, 204, 0.03) 0%, rgba(245, 158, 11, 0.03) 100%);
+            padding: 2.75rem 2.25rem;
+            border-radius: 14px;
             border: 1px solid var(--border-light);
             box-shadow: var(--shadow-sm);
             transition: all 0.3s ease;
@@ -536,7 +518,7 @@
             bottom: 0;
             width: 4px;
             background: linear-gradient(180deg, var(--accent-gold) 0%, var(--primary-blue) 100%);
-            border-radius: 12px 0 0 12px;
+            border-radius: 14px 0 0 14px;
         }
 
         .benefit-card:hover {
@@ -546,14 +528,15 @@
         }
 
         .benefit-icon {
-            font-size: 2.2rem;
-            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .benefit-card h3 {
             color: var(--primary-dark);
             margin-bottom: 0.75rem;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
         .benefit-card p {
@@ -566,28 +549,29 @@
         .stats {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
             color: var(--white);
-            padding: 4rem 1.5rem;
-            margin: 4rem 0;
+            padding: 4.5rem 1.5rem;
+            margin: 4.5rem 0;
             border-radius: 16px;
         }
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
             text-align: center;
         }
 
         .stat-item h3 {
-            font-size: 2.5rem;
+            font-size: 2.75rem;
             color: var(--accent-gold);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
             font-weight: 700;
         }
 
         .stat-item p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             opacity: 0.9;
+            font-weight: 500;
         }
 
         /* Depoimentos */
@@ -595,22 +579,17 @@
             background-color: var(--light-bg);
         }
 
-        .testimonials h2 {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3.5rem;
         }
 
         .testimonial-card {
             background-color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
+            padding: 2.5rem 2.25rem;
+            border-radius: 14px;
             box-shadow: var(--shadow-md);
             border-top: 4px solid var(--accent-gold);
             transition: all 0.3s ease;
@@ -618,26 +597,27 @@
 
         .testimonial-card:hover {
             box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
+            transform: translateY(-6px);
         }
 
         .testimonial-rating {
             color: var(--accent-gold);
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            margin-bottom: 1.25rem;
             letter-spacing: 2px;
+            font-weight: 600;
         }
 
         .testimonial-text {
             color: var(--text-gray);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.75rem;
             font-style: italic;
             line-height: 1.8;
             font-size: 0.95rem;
         }
 
         .testimonial-author {
-            font-weight: 600;
+            font-weight: 700;
             color: var(--primary-dark);
             font-size: 0.95rem;
         }
@@ -645,6 +625,7 @@
         .testimonial-role {
             color: var(--text-light);
             font-size: 0.85rem;
+            font-weight: 500;
         }
 
         /* FAQ */
@@ -652,20 +633,15 @@
             background-color: var(--white);
         }
 
-        .faq h2 {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
         .faq-container {
             max-width: 800px;
-            margin: 3rem auto 0;
+            margin: 3.5rem auto 0;
         }
 
         .faq-item {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
             border: 1px solid var(--border-light);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             background-color: var(--white);
             transition: all 0.3s ease;
@@ -678,7 +654,7 @@
 
         .faq-question {
             background-color: var(--light-bg);
-            padding: 1.5rem;
+            padding: 1.75rem;
             cursor: pointer;
             font-weight: 600;
             color: var(--primary-dark);
@@ -687,6 +663,7 @@
             align-items: center;
             transition: all 0.3s ease;
             user-select: none;
+            font-size: 1rem;
         }
 
         .faq-question:hover {
@@ -705,7 +682,7 @@
         }
 
         .faq-answer {
-            padding: 0 1.5rem;
+            padding: 0 1.75rem;
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease;
@@ -713,7 +690,7 @@
         }
 
         .faq-item.active .faq-answer {
-            padding: 1.5rem;
+            padding: 1.75rem;
             max-height: 600px;
         }
 
@@ -726,23 +703,23 @@
         .compliance-banner {
             background-color: #f0f9ff;
             border-left: 4px solid var(--primary-blue);
-            padding: 1.5rem;
-            border-radius: 8px;
+            padding: 2rem;
+            border-radius: 12px;
             margin: 3rem 0;
         }
 
         .compliance-banner h4 {
             color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+            font-weight: 700;
         }
 
         .compliance-banner p {
             color: var(--text-gray);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin: 0.5rem 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin: 0.75rem 0;
         }
 
         .compliance-banner a {
@@ -761,7 +738,7 @@
         .final-cta {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
             color: var(--white);
-            padding: 5rem 1.5rem;
+            padding: 5.5rem 1.5rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -774,7 +751,7 @@
             right: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -785,23 +762,24 @@
 
         .final-cta h2 {
             color: var(--white);
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
         }
 
         .final-cta p {
             font-size: 1.1rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.75rem;
             opacity: 0.95;
-            max-width: 600px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.8;
         }
 
         /* Footer */
         footer {
             background-color: var(--primary-dark);
             color: var(--white);
-            padding: 4rem 1.5rem 2rem;
+            padding: 4.5rem 1.5rem 2rem;
         }
 
         .footer-content {
@@ -811,16 +789,16 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .footer-section h4 {
             color: var(--accent-gold);
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            font-weight: 600;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+            font-weight: 700;
         }
 
         .footer-section p {
@@ -840,6 +818,7 @@
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .footer-links a:hover {
@@ -848,8 +827,8 @@
 
         .footer-divider {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            margin-top: 2rem;
+            padding-top: 2.5rem;
+            margin-top: 2.5rem;
         }
 
         .footer-bottom {
@@ -863,27 +842,28 @@
         .footer-copyright {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.85rem;
+            font-weight: 500;
         }
 
         .footer-disclaimer {
             background-color: rgba(0, 0, 0, 0.2);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-top: 2rem;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2.5rem;
             border-left: 4px solid var(--accent-gold);
         }
 
         .footer-disclaimer h5 {
             color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            font-weight: 700;
         }
 
         .footer-disclaimer p {
             color: rgba(255, 255, 255, 0.8);
-            font-size: 0.85rem;
-            line-height: 1.7;
+            font-size: 0.9rem;
+            line-height: 1.8;
         }
 
         /* Animações */
@@ -898,32 +878,8 @@
             }
         }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-
         .fade-in-up {
             animation: fadeInUp 0.6s ease-out;
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 0.6s ease-out;
         }
 
         /* Responsividade */
@@ -1001,38 +957,42 @@
             }
 
             section {
-                padding: 3rem 1.5rem;
+                padding: 3.5rem 1.5rem;
+            }
+
+            .section-subtitle {
+                margin-bottom: 2.75rem;
             }
 
             .requirements-grid,
             .benefits-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .requirement-card,
             .benefit-card,
             .testimonial-card {
-                padding: 1.75rem 1.5rem;
+                padding: 2rem 1.75rem;
             }
 
             .requirement-icon,
             .benefit-icon {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .stat-item h3 {
-                font-size: 1.75rem;
+                font-size: 2.25rem;
             }
 
             .stat-item p {
-                font-size: 0.85rem;
+                font-size: 0.95rem;
             }
 
             .faq-container {
@@ -1040,7 +1000,7 @@
             }
 
             .faq-question {
-                padding: 1.25rem;
+                padding: 1.5rem;
                 font-size: 0.95rem;
             }
 
@@ -1049,20 +1009,20 @@
             }
 
             .final-cta {
-                padding: 3rem 1.5rem;
+                padding: 3.5rem 1.5rem;
             }
 
             .final-cta h2 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
             }
 
             .final-cta p {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .footer-bottom {
@@ -1071,12 +1031,12 @@
             }
 
             .compliance-banner {
-                padding: 1.25rem;
-                margin: 2rem 0;
+                padding: 1.5rem;
+                margin: 2.5rem 0;
             }
 
             .compliance-banner p {
-                font-size: 0.85rem;
+                font-size: 0.9rem;
             }
         }
 
@@ -1101,11 +1061,11 @@
             }
 
             h1 {
-                font-size: 1.5rem;
+                font-size: 1.85rem;
             }
 
             h2 {
-                font-size: 1.25rem;
+                font-size: 1.4rem;
             }
 
             .hero {
@@ -1135,71 +1095,46 @@
             }
 
             section {
-                padding: 2.5rem 1rem;
+                padding: 2.75rem 1rem;
             }
 
             .requirement-card,
             .benefit-card,
             .testimonial-card {
-                padding: 1.5rem 1rem;
+                padding: 1.75rem 1.25rem;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 1.25rem;
+                gap: 1.75rem;
             }
 
             .stat-item h3 {
-                font-size: 1.5rem;
+                font-size: 1.9rem;
             }
 
             .faq-question {
-                padding: 1rem;
+                padding: 1.25rem;
                 font-size: 0.9rem;
             }
 
             .final-cta {
-                padding: 2.5rem 1rem;
+                padding: 2.75rem 1rem;
             }
 
             .final-cta h2 {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
 
             .compliance-banner {
-                padding: 1rem;
+                padding: 1.25rem;
             }
         }
 
         /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
         button:focus, a:focus {
             outline: 2px solid var(--primary-blue);
             outline-offset: 2px;
-        }
-
-        /* Utility Classes */
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-4 {
-            margin-top: 2rem;
-        }
-
-        .mb-4 {
-            margin-bottom: 2rem;
         }
     </style>
 </head>
@@ -1217,7 +1152,7 @@
                 <a href="#faq">Perguntas</a>
                 <a href="#contato">Contato</a>
             </nav>
-            <button class="btn-header" onclick="abrirMEI()">Iniciar Processo</button>
+            <button class="btn-header" onclick="abrirMEI()">Iniciar</button>
             <button class="mobile-menu-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
         </div>
         <nav class="mobile-nav" id="mobile-nav">
@@ -1225,7 +1160,7 @@
             <a href="#requisitos" onclick="closeMobileMenu()">Requisitos</a>
             <a href="#faq" onclick="closeMobileMenu()">Perguntas</a>
             <a href="#contato" onclick="closeMobileMenu()">Contato</a>
-            <button class="btn-header" onclick="abrirMEI(); closeMobileMenu();">Iniciar Processo</button>
+            <button class="btn-header" onclick="abrirMEI(); closeMobileMenu();">Iniciar</button>
         </nav>
     </header>
 
@@ -1254,16 +1189,15 @@
     </section>
 
     <!-- Compliance Banner -->
-    <section class="container mt-4">
+    <section class="container">
         <div class="compliance-banner">
             <h4>⚠️ Informação Importante</h4>
             <p><strong>Este é um serviço privado de consultoria e assessoria profissional.</strong> Não é um site governamental.</p>
-            <p>Todos os processos de registro, alteração e encerramento de CNPJ MEI podem ser realizados <strong>gratuitamente</strong> nas plataformas oficiais do governo:</p>
+            <p>Todos os processos podem ser realizados <strong>gratuitamente</strong> no portal oficial do governo:</p>
             <p>
                 <a href="https://www.gov.br/cidadania/pt-br/acesso-a-informacao/acoes-e-programas/mei" target="_blank" rel="noopener noreferrer">Portal Oficial do MEI</a> | 
                 <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/" target="_blank" rel="noopener noreferrer">Simples Nacional</a>
             </p>
-            <p>Oferecemos um <strong>serviço opcional</strong> de assessoria para agilizar o processo e oferecer suporte profissional em cada etapa.</p>
         </div>
     </section>
 
@@ -1511,7 +1445,6 @@
                 <h5>⚠️ Aviso Legal Importante</h5>
                 <p><strong>Este é um serviço privado de consultoria e assessoria profissional, não um site governamental.</strong></p>
                 <p>Todos os processos de registro, alteração e encerramento de CNPJ MEI podem ser realizados <strong>gratuitamente</strong> nas plataformas oficiais do governo. Oferecemos um <strong>serviço opcional</strong> de assessoria especializada para simplificar sua jornada, garantindo agilidade, segurança e suporte profissional em cada etapa.</p>
-                <p>Escolha a conveniência e o acompanhamento que fazem a diferença para o seu negócio.</p>
             </div>
 
             <div class="footer-divider">
@@ -1523,7 +1456,6 @@
     </footer>
 
     <script>
-        // Funções de Navegação
         function abrirMEI() {
             window.location.href = 'https://www.gov.br/cidadania/pt-br/acesso-a-informacao/acoes-e-programas/mei';
         }
@@ -1548,7 +1480,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Toggle Mobile Menu
         function toggleMobileMenu() {
             const mobileNav = document.getElementById('mobile-nav');
             const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -1563,7 +1494,6 @@
             mobileBtn.classList.remove('active');
         }
 
-        // Fechar menu ao clicar fora
         document.addEventListener('click', function(e) {
             const header = document.querySelector('header');
             if (!header.contains(e.target)) {
@@ -1571,13 +1501,11 @@
             }
         });
 
-        // Toggle FAQ
         function toggleFAQ(element) {
             const faqItem = element.parentElement;
             faqItem.classList.toggle('active');
         }
 
-        // Fechar outros FAQs ao abrir um novo
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', function() {
                 const currentItem = this.parentElement;
@@ -1589,7 +1517,6 @@
             });
         });
 
-        // Smooth scroll para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -1606,14 +1533,13 @@
             });
         });
 
-        // Animação ao carregar
         document.addEventListener('DOMContentLoaded', function() {
-            const fadeElements = document.querySelectorAll('.fade-in-up, .slide-in-left');
+            const fadeElements = document.querySelectorAll('.fade-in-up');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0) translateX(0)';
+                        entry.target.style.transform = 'translateY(0)';
                     }
                 });
             }, { threshold: 0.1 });
@@ -1623,13 +1549,6 @@
                 element.style.transform = 'translateY(30px)';
                 observer.observe(element);
             });
-        });
-
-        // Prevenir comportamento padrão de links internos
-        document.addEventListener('click', function(e) {
-            if (e.target.tagName === 'A' && e.target.getAttribute('href') === '#') {
-                e.preventDefault();
-            }
         });
     </script>
 </body>
