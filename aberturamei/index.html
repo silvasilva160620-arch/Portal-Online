@@ -129,6 +129,8 @@
 
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
         }
 
         body {
@@ -146,7 +148,7 @@
             margin: 0 auto;
             padding: 0 24px;
             width: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         /* ===== HEADER ===== */
@@ -976,7 +978,7 @@
             }
 
             .btn-header {
-                display: none;
+                display: none !important;
             }
 
             .hero {
@@ -989,6 +991,7 @@
 
             .hero-subtitle {
                 font-size: 18px;
+                max-width: 100%;
             }
 
             .hero-buttons {
@@ -1003,10 +1006,12 @@
             .hero-stats {
                 grid-template-columns: 1fr;
                 gap: 24px;
+                width: 100%;
             }
 
             .section-title {
                 font-size: 32px;
+                width: 100%;
             }
 
             .servicos-grid,
@@ -1033,6 +1038,11 @@
 
             .cta h2 {
                 font-size: 32px;
+                width: 100%;
+            }
+
+            .cta p {
+                max-width: 100%;
             }
 
             .footer-content {
