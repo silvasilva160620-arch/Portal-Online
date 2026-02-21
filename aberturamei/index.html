@@ -270,18 +270,39 @@
         .menu-toggle {
             display: none;
             flex-direction: column;
-            background: none;
+            justify-content: center;
+            align-items: center;
+            background: var(--light);
             border: none;
             cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
             gap: 5px;
+            transition: all 0.3s ease;
         }
 
         .menu-toggle span {
-            width: 24px;
+            width: 20px;
             height: 2px;
             background: var(--text-dark);
             border-radius: 2px;
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+            background: var(--primary);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+            background: var(--primary);
         }
 
         /* ===== HERO ===== */
@@ -904,21 +925,44 @@
         }
         @media (max-width: 768px) {
             .nav {
-                display: none;
-                position: absolute;
-                top: 70px;
+                position: fixed;
+                top: 72px;
                 left: 0;
                 right: 0;
+                bottom: 0;
                 flex-direction: column;
                 background: white;
-                padding: 24px;
-                gap: 16px;
-                border-bottom: 1px solid var(--border);
-                box-shadow: var(--shadow);
+                padding: 40px 24px;
+                gap: 24px;
+                transform: translateX(100%);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                overflow-y: auto;
+                align-items: flex-start;
             }
 
             .nav.active {
-                display: flex;
+                transform: translateX(0);
+            }
+
+            .nav a {
+                font-size: 18px;
+                font-weight: 600;
+                width: 100%;
+                padding: 12px 0;
+                border-bottom: 1px solid var(--light-secondary);
+            }
+
+            .nav a::after {
+                display: none;
+            }
+
+            .nav .btn-primary {
+                width: 100%;
+                margin-top: 20px;
+                padding: 16px;
+                font-size: 16px;
+                justify-content: center;
             }
 
             .menu-toggle {
@@ -1090,7 +1134,7 @@
                 <p class="hero-subtitle">Consultoria especializada em MEI. Simplificamos a burocracia para que você foque no crescimento do seu negócio.</p>
                 <div class="hero-buttons">
                     <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">Abrir MEI Agora</a>
-                    <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+                    <a href="https://www.meiconsultoria.com.br/sobre" class="btn btn-secondary" target="_blank">Saiba Mais</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
@@ -1141,7 +1185,7 @@
                     <span class="servico-icon">🛡️</span>
                     <h3>Consultoria</h3>
                     <p>Orientação especializada sobre direitos, benefícios e obrigações do MEI.</p>
-                    <a href="#contato" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_consultoria'});">Saiba Mais</a>
+                    <a href="https://www.meiconsultoria.com.br/consultoria" target="_blank" class="btn btn-outline" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'servico_consultoria'});">Saiba Mais</a>
                 </div>
                 <div class="servico-card">
                     <span class="servico-icon">📄</span>
@@ -1455,20 +1499,33 @@
         // Menu Mobile
         const menuToggle = document.getElementById('menuToggle');
         const nav = document.getElementById('nav');
+        const body = document.body;
 
         menuToggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
+            const isActive = nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            
+            // Bloquear scroll quando menu estiver aberto
+            if (isActive) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
         });
 
         document.querySelectorAll('.nav a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                body.style.overflow = '';
             });
         });
 
         document.addEventListener('click', (e) => {
-            if (!e.target.closest('.header')) {
+            if (!e.target.closest('.header') && nav.classList.contains('active')) {
                 nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+                body.style.overflow = '';
             }
         });
 
