@@ -498,6 +498,75 @@
             gap: 24px;
         }
 
+        /* ===== FLOATING ICON ===== */
+        .floating-icon {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 999;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-icon:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .floating-icon::before {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .floating-icon::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 10px solid white;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .floating-icon {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+        }
+
         .beneficio-item {
             background: white;
             padding: 32px 24px;
@@ -1164,7 +1233,7 @@
                 <h1>Consultoria Especializada em Formalização MEI</h1>
                 <p class="hero-subtitle">Auxiliamos você em todo o processo de abertura e gestão do seu MEI. Conte com especialistas para garantir que sua empresa esteja em dia com todas as obrigações legais.</p>
                 <div class="hero-buttons">
-                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px; animation: pulse 2s infinite;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">INICIAR ABERTURA</a>
+                    <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 14px 32px; animation: pulse 2s infinite;" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'hero_primary_cta'});">INICIAR ABERTURA <span style="margin-left: 8px;">→</span></a>
                     <a href="#beneficios" class="btn btn-secondary">Ver Benefícios</a>
                 </div>
                 <p style="font-size: 12px; color: var(--text-light); margin-top: 16px; opacity: 0.8;">* Empresa privada de consultoria. A abertura do MEI é gratuita no portal oficial do governo.</p>
@@ -1626,5 +1695,8 @@
             });
         });
     </script>
+
+    <!-- Floating Icon -->
+    <div class="floating-icon" title="Clique para entrar em contato" onclick="gtag('event', 'click', {'event_category': 'engagement', 'event_label': 'floating_icon'}); window.open('https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei', '_blank');"></div>
 </body>
 </html>
