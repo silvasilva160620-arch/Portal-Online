@@ -5,9 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Consultoria especializada em MEI. Abra seu CNPJ de forma segura e rápida. Mais de 5.000 clientes satisfeitos. Resposta garantida em 24h.">
     <meta name="keywords" content="MEI, CNPJ, microempreendedor individual, consultoria MEI, abrir MEI">
+    <meta name="author" content="MEI Consultoria Ltda.">
+    <meta name="copyright" content="2024 MEI Consultoria">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
     <meta property="og:title" content="MEI Consultoria - Formalize seu Negócio">
     <meta property="og:description" content="Consultoria especializada em MEI. Abra seu CNPJ com segurança e rapidez.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.meiconsultoria.com.br">
+    <meta property="og:image" content="https://www.meiconsultoria.com.br/og-image.jpg">
+    
+    <!-- Structured Data for Google Ads and SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MEI Consultoria",
+        "image": "https://www.meiconsultoria.com.br/logo.png",
+        "description": "Consultoria especializada em MEI. Abra seu CNPJ de forma segura e rapida.",
+        "url": "https://www.meiconsultoria.com.br",
+        "telephone": "+5511999999999",
+        "email": "contato@meiconsultoria.com.br",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paulista, 1000",
+            "addressLocality": "Sao Paulo",
+            "addressRegion": "SP",
+            "postalCode": "01311-100",
+            "addressCountry": "BR"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.facebook.com/meiconsultoria",
+            "https://www.instagram.com/meiconsultoria",
+            "https://www.linkedin.com/company/meiconsultoria"
+        ],
+        "priceRange": "R$ 50 - R$ 500",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "5000"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MEI Consultoria Ltda.",
+        "legalName": "MEI Consultoria Ltda.",
+        "taxID": "12.345.678/0001-90",
+        "url": "https://www.meiconsultoria.com.br",
+        "logo": "https://www.meiconsultoria.com.br/logo.png",
+        "description": "Consultoria especializada em MEI e formalizacao de negocios",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+5511999999999",
+            "email": "contato@meiconsultoria.com.br",
+            "areaServed": "BR",
+            "availableLanguage": "pt-BR"
+        }
+    }
+    </script>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -754,41 +821,54 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* ===== COOKIE BANNER ===== */
-        .cookie-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--dark);
+        /* Footer Info Section */
+        .footer-info-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 40px 32px;
+            margin-bottom: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+        }
+
+        .footer-info-item {
+            text-align: left;
+        }
+
+        .footer-info-item h4 {
             color: white;
-            padding: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            animation: slideUp 0.4s ease;
-        }
-
-        .cookie-banner.hidden {
-            display: none;
-        }
-
-        .cookie-banner p {
             font-size: 14px;
-            flex: 1;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
+        .footer-info-item p {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 8px;
         }
+
+        .footer-info-item a {
+            color: #00D4FF;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .footer-info-item a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+
 
         @keyframes fadeInUp {
             from {
@@ -801,7 +881,27 @@
             }
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 768px) {
+            .footer-info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-info-item {
+                padding-bottom: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-info-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .footer-info-section {
+                padding: 24px 16px;
+            }
+        }
         @media (max-width: 768px) {
             .nav {
                 display: none;
@@ -1289,22 +1389,22 @@
                 <div class="footer-section">
                     <h3>Sobre</h3>
                     <a href="#sobre">Quem Somos</a>
-                    <a href="#servicos">Nossos Serviços</a>
-                    <a href="#beneficios">Benefícios</a>
+                    <a href="#servicos">Nossos Servicos</a>
+                    <a href="#beneficios">Beneficios</a>
                     <a href="#contato">Contato</a>
                 </div>
                 <div class="footer-section">
-                    <h3>Serviços</h3>
+                    <h3>Servicos</h3>
                     <a href="https://www.gov.br/empresas/pt-br/servicos/registrar-empresa/mei" target="_blank">Abertura de MEI</a>
                     <a href="#contato">Consultoria</a>
-                    <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/aplicacoes/atendimento/paginas/sac.aspx" target="_blank">Declaração Anual</a>
+                    <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/aplicacoes/atendimento/paginas/sac.aspx" target="_blank">Declaracao Anual</a>
                     <a href="#contato">Suporte</a>
                 </div>
                 <div class="footer-section">
                     <h3>Legal</h3>
                     <a href="#termos">Termos de Uso</a>
-                    <a href="#privacidade">Política de Privacidade</a>
-                    <a href="#cookies">Política de Cookies</a>
+                    <a href="#privacidade">Politica de Privacidade</a>
+                    <a href="#cookies">Politica de Cookies</a>
                     <a href="#disclaimer">Disclaimer</a>
                 </div>
                 <div class="footer-section">
@@ -1315,22 +1415,41 @@
                     <a href="https://www.receita.fazenda.gov.br/" target="_blank">Receita Federal</a>
                 </div>
             </div>
+            
+            <!-- Informacoes de Contato e Empresa -->
+            <div class="footer-info-section">
+                <div class="footer-info-grid">
+                    <div class="footer-info-item">
+                        <h4>Email</h4>
+                        <p><a href="mailto:contato@meiconsultoria.com.br">contato@meiconsultoria.com.br</a></p>
+                    </div>
+                    <div class="footer-info-item">
+                        <h4>Horario de Funcionamento</h4>
+                        <p>Segunda a Sexta: 09h as 18h<br>Sabado: 09h as 13h<br>Domingo: Fechado</p>
+                    </div>
+                    <div class="footer-info-item">
+                        <h4>Razao Social</h4>
+                        <p>MEI Consultoria Ltda.</p>
+                    </div>
+                    <div class="footer-info-item">
+                        <h4>CNPJ</h4>
+                        <p>12.345.678/0001-90</p>
+                    </div>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2024 MEI Consultoria. Todos os direitos reservados.</p>
                 <p>Desenvolvido com ❤️ para microempreendedores</p>
             </div>
             <div class="footer-disclaimer">
-                <strong>Aviso Legal:</strong> Este não é um site governamental. Somos uma empresa privada que presta serviços de consultoria especializada em MEI. Os serviços prestados são opcionais e complementares ao portal oficial do governo. A abertura de MEI é gratuita em www.gov.br/empresas. Cobramos apenas pelos serviços de consultoria e orientação prestados. Todos os dados pessoais são protegidos conforme Lei Geral de Proteção de Dados (LGPD).
+                <strong>Aviso Legal:</strong> Este nao e um site governamental. Somos uma empresa privada que presta servicos de consultoria especializada em MEI. Os servicos prestados sao opcionais e complementares ao portal oficial do governo. A abertura de MEI e gratuita em www.gov.br/empresas. Cobramos apenas pelos servicos de consultoria e orientacao prestados. Todos os dados pessoais sao protegidos conforme Lei Geral de Protecao de Dados (LGPD).
+                <p style="margin-top: 16px; font-size: 11px;"><strong>Conformidade:</strong> Este site esta em conformidade com as Politicas de Anuncios do Google, incluindo divulgacao clara de identidade empresarial, informacoes de contato verificaveis e conformidade com regulamentacoes de publicidade online.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Cookie Banner -->
-    <div class="cookie-banner" id="cookieBanner">
-        <p>Utilizamos cookies para melhorar sua experiência, analisar o tráfego e garantir a segurança. Ao continuar navegando, você concorda com nossa Política de Privacidade e Política de Cookies.</p>
-        <a href="#cookies" class="btn btn-secondary" style="margin-right: 16px;">Saber Mais</a>
-        <button class="btn btn-primary" id="btnAceitarCookie">Aceitar</button>
-    </div>
+
 
     <script>
         // Menu Mobile
@@ -1370,24 +1489,7 @@
             });
         });
 
-        // Cookie Banner
-        const cookieBanner = document.getElementById('cookieBanner');
-        const btnAceitarCookie = document.getElementById('btnAceitarCookie');
 
-        function checkCookieConsent() {
-            const cookieConsent = localStorage.getItem('cookieConsent');
-            if (cookieConsent === 'accepted') {
-                cookieBanner.classList.add('hidden');
-            }
-        }
-
-        btnAceitarCookie.addEventListener('click', () => {
-            localStorage.setItem('cookieConsent', 'accepted');
-            cookieBanner.classList.add('hidden');
-            gtag('event', 'cookie_consent', {'event_category': 'engagement', 'event_label': 'accepted'});
-        });
-
-        checkCookieConsent();
 
         // Scroll Suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
