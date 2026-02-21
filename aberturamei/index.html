@@ -105,26 +105,28 @@
         }
 
         :root {
-            --primary: #0052CC;
-            --primary-dark: #003A99;
-            --primary-light: #0066FF;
-            --secondary: #00D4FF;
-            --accent: #FF6B35;
-            --success: #10B981;
-            --warning: #F59E0B;
-            --danger: #EF4444;
-            --dark: #0F172A;
-            --dark-secondary: #1E293B;
+            --primary: #003D82;
+            --primary-dark: #002147;
+            --primary-light: #0052CC;
+            --secondary: #00A8E8;
+            --accent: #D4A574;
+            --success: #06A77D;
+            --warning: #E8A000;
+            --danger: #DC2626;
+            --dark: #0A1428;
+            --dark-secondary: #1A2332;
             --light: #F8FAFC;
-            --light-secondary: #E2E8F0;
-            --text-dark: #1E293B;
-            --text-light: #64748B;
-            --border: #E2E8F0;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            --light-secondary: #E8EEF5;
+            --text-dark: #0A1428;
+            --text-light: #5A6B7D;
+            --border: #D4DFE8;
+            --gold: #D4A574;
+            --gold-light: #E8C9A0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+            --shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.18);
+            --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
         html {
@@ -245,11 +247,13 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             box-shadow: var(--shadow);
+            border: 2px solid transparent;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--gold);
         }
 
         .btn-secondary {
@@ -378,7 +382,7 @@
         /* ===== HERO ===== */
         .hero {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
             position: relative;
             overflow: hidden;
         }
@@ -390,7 +394,7 @@
             right: -10%;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(0, 61, 130, 0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
 
@@ -462,7 +466,7 @@
 
         .section-label {
             display: inline-block;
-            background: linear-gradient(135deg, rgba(0, 82, 204, 0.1), rgba(0, 212, 255, 0.1));
+            background: linear-gradient(135deg, rgba(0, 61, 130, 0.12), rgba(0, 168, 232, 0.12));
             color: var(--primary);
             padding: 8px 16px;
             border-radius: 20px;
@@ -512,7 +516,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            background: linear-gradient(90deg, var(--primary), var(--gold));
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
@@ -552,7 +556,7 @@
         /* ===== BENEFÍCIOS ===== */
         .beneficios {
             padding: 100px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #e8eef5 100%);
         }
 
         .beneficios-grid {
@@ -568,7 +572,7 @@
             right: 30px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            background: linear-gradient(135deg, var(--primary), var(--gold));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -933,9 +937,10 @@
 
         /* ===== FOOTER ===== */
         .footer {
-            background: var(--dark);
-            color: #94a3b8;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-secondary) 100%);
+            color: #8a95a3;
             padding: 64px 0 24px;
+            border-top: 3px solid var(--gold);
         }
 
         .footer-content {
@@ -948,7 +953,7 @@
         }
 
         .footer-section h3 {
-            color: white;
+            color: var(--gold);
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 16px;
@@ -964,7 +969,7 @@
         }
 
         .footer-section a:hover {
-            color: white;
+            color: var(--gold);
         }
 
         .footer-bottom {
